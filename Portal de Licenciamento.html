@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://portaldelicenciamento.prefeitura.sp.gov.br/">
+    <title>Portal de Licenciamento</title>
+
+    <link href="./Portal de Licenciamento_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./Portal de Licenciamento_files/main.css">
+    <link rel="stylesheet" href="./Portal de Licenciamento_files/page-landing.css">
+    <style>
+        #copilot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            width: 50%;
+            height: 350px;
+        }
+        #toggleCopilot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background-color: transparent;
+            border: none;
+        }
+        #toggleCopilot img {
+            width: 50px;
+            height: 50px;
+        }
+        #closeCopilot {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 101;
+            background-color: transparent;
+            border: none;
+            font-size: 35px;
+            cursor: pointer;
+            color: azure;
+        }
+    </style>
+</head>
+<body id="page-landing">
+    <div id="container">
+        <!-- Resto do conteúdo -->
+
+        <main>
+            <div class="page-image">
+                <img src="./Portal de Licenciamento_files/banner_home.png" alt="Bem Vindo">
+            </div>
+            <div class="page">
+                <div class="page-content">
+                    <p>Seja bem-vindo(a)!</p>
+                    <p>
+                        O <b>Portal de Licenciamento</b> é a sua principal porta de entrada na Prefeitura de São Paulo para solicitação ou análise de documentos relacionados aos <b>licenciamentos edilícios</b>, de <b>atividades</b> e <b>ambientais</b> na cidade.
+                    </p>
+                    <p>Aqui você vai encontrar informações relacionadas à <b>aprovação de projetos, licenças, habite-se, certidões</b> e mais de <b>300 outros serviços.</b></p>
+                </div>
+
+                <div class="services">
+                    <!-- Conteúdo dos serviços -->
+                </div>
+
+                <!-- Botão para abrir o Copilot -->
+                <button id="toggleCopilot">
+                    <img src="./Portal de Licenciamento_files/boto.png" alt="Abrir Copilot">
+                </button>
+
+                <!-- Conteúdo do Copilot -->
+                <div id="copilot-container">
+                    <button id="closeCopilot">&times;</button>
+                    <iframe src="https://copilotstudio.microsoft.com/environments/Default-f398df9c-fd0c-4829-a003-c770a1c4a063/bots/cr0dc_portalDeLicenciamento/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;">
+                    </iframe>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <img class="logo-white" src="./Portal de Licenciamento_files/logo_portal_white.png" alt="Portal Licenciamento">
+            <img class="prodam-white" src="./Portal de Licenciamento_files/logo-prodam-white.svg" alt="Prodam">
+        </footer>
+    </div>
+
+    <script>
+        const toggleCopilot = document.getElementById('toggleCopilot');
+        const copilotContainer = document.getElementById('copilot-container');
+        const closeCopilot = document.getElementById('closeCopilot');
+
+        toggleCopilot.addEventListener('click', () => {
+            copilotContainer.style.display = 'block';
+        });
+
+        closeCopilot.addEventListener('click', () => {
+            copilotContainer.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
