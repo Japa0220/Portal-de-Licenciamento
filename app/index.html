@@ -93,10 +93,12 @@
 
         toggleCopilot.addEventListener('click', () => {
             copilotContainer.style.display = 'block';
+            toggleCopilot.style.display = 'none';
         });
 
         closeCopilot.addEventListener('click', () => {
             copilotContainer.style.display = 'none';
+            toggleCopilot.style.display = 'block';
         });
     </script>
 </body>

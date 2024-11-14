@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "portal-de-licenciamento": {
+      "appLocation": "app",
+      "outputLocation": ".",
+      "appName": "portal-de-licenciamento",
+      "resourceGroup": "rg-pn1006"
+    }
+  }
+}
