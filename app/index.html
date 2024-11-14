@@ -70,7 +70,7 @@
                 </button>
 
                 <!-- Conteúdo do Copilot -->
-                <div id="copilot-container">
+                <div id="copilot-container" style="z-index: 999">
                     <button id="closeCopilot">&times;</button>
                     <iframe src="https://copilotstudio.microsoft.com/environments/Default-f398df9c-fd0c-4829-a003-c770a1c4a063/bots/cr0dc_portalDeLicenciamento/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;">
                     </iframe>
@@ -93,12 +93,10 @@
 
         toggleCopilot.addEventListener('click', () => {
             copilotContainer.style.display = 'block';
-            toggleCopilot.style.display = 'none';
         });
 
         closeCopilot.addEventListener('click', () => {
             copilotContainer.style.display = 'none';
-            toggleCopilot.style.display = 'block';
         });
     </script>
 </body>
